@@ -15,21 +15,22 @@ const TodosProvider = ({ children }) => {
         }
     }
 
-    const addTodo = async (description) => {
+    const addTodo = async (todo) => {
         try {
             const res = await fetch('/api/createTodo', {
                 method: 'POST',
-                body: JSON.stringify({ description }),
-                headers: { 'Content-Type': 'application/json' }
+                body: JSON.stringify({ description: todo }),
+                headers: { 'Content-Type': 'application/json' },
             });
-            const latestTodos = await res.json();
+            const newTodo = await res.json();
             setTodos((prevTodos) => {
-                return [newTodo, ...prevTodos]
+                const updatedTodos = [newTodo, ...prevTodos];
+                return updatedTodos;
             });
         } catch (err) {
             console.error(err);
         }
-    }
+    };
     const updateTodo = async (updatedTodo) => {
         try {
             await fetch('/api/updateTodo', {
