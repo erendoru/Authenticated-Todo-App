@@ -1,5 +1,5 @@
 
-import { table } from './utils/airtable.js';
+import { table } from './utils/Airtable.js';
 import auth0 from './utils/auth0';
 
 const handler = async (req, res) => {

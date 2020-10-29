@@ -1,6 +1,6 @@
 This project is made with NextJS, auth0 and airtable. It was my first time trying to connect airtable and playing with data in nextJS, it was fun. I want to improve this project with adding more features. Soon will be better, I hope so.
 
-Live Demo: 
+Live Demo:
 
 ## Getting Started
 
