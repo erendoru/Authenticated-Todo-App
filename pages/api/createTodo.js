@@ -1,4 +1,4 @@
-import { table, minifyRecords } from './utils/Airtable';
+import { table } from './utils/Airtable';
 import auth0 from './utils/auth0';
 
 export default auth0.requireAuthentication(async (req, res) => {
